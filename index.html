@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Site</title>
+    <link href="index.css" rel="stylesheet">
+    <link href="./dist/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="index.js"></script>
+
+</head>
+<body>
+  <nav class=" bg-eerie-black ">
+    <div class="mx-auto z-10 max-w-8xl px-2 sm:px-6 lg:px-4">
+      <div class="relative flex h-16 items-center justify-between">
+        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+          <!-- Mobile menu button-->
+          <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+            <span class="absolute -inset-0.5"></span>
+            <span class="sr-only">Open main menu</span>
+            <!--
+              Icon when menu is closed.
+  
+              Menu open: "hidden", Menu closed: "block"
+            -->
+            <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+            <!--
+              Icon when menu is open.
+  
+              Menu open: "block", Menu closed: "hidden"
+            -->
+            <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="flex flex-1 items-end justify-end sm:items-stretch sm:justify-between">
+          <div class="flex flex-shrink-0 items-center">
+            <span class="uppercase font-extrabold text-lg tracking-widest text-celadon ">BitterOstrich</span>
+          </div>
+          <div class="hidden sm:ml-6 sm:block">
+            <div class="flex items-end space-x-4">
+              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+             
+              <a href="#" class="text-gray-300 uppercase hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm tracking-wider font-bold">Projects</a>
+              <a href="#" class="text-gray-300 uppercase hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm tracking-wider font-bold">Myself</a>
+              
+              <a href="#" class="text-gray-300 uppercase hover:text-white 
+              hover:pl-4 duration-300 hover:-translate-x-2 bg- hover:bg-green-500 px-3 py-2 text-sm tracking-wider font-bold">Contact me</a>
+            </div>
+          </div>
+        </div>
+        <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+
+  
+          <!-- Profile dropdown -->
+          <div class="relative ml-3">
+
+  
+            <!--
+              Dropdown menu, show/hide based on menu state.
+  
+              Entering: "transition ease-out duration-100"
+                From: "transform opacity-0 scale-95"
+                To: "transform opacity-100 scale-100"
+              Leaving: "transition ease-in duration-75"
+                From: "transform opacity-100 scale-100"
+                To: "transform opacity-0 scale-95"
+            -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="sm:hidden" id="mobile-menu">
+      <div class="space-y-1 px-2 pb-3 pt-2">
+        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+        <a href="#" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Dashboard</a>
+        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Team</a>
+        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Projects</a>
+        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Calendar</a>
+      </div>
+    </div>
+  </nav>
+
+
+    <div class="background_wrapper px-4 py-12 ">
+        <div class="preloader-section" id="preloader">
+            <h3>Welcome To My Site.</h3>
+        </div>
+        <section class="hero-section">
+            <div>
+                <div class="relative isolate px-6 pt-14 lg:px-8">
+                  <!-- <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
+                    <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+                  </div> -->
+                  <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+    
+                    <div class="text-center">
+                      <span id="typewriterText" class="text-4xl font-bold tracking-tight text-white sm:text-6xl"></span><span class="cursor"></span>
+                      <p class="mt-6 text-lg leading-8 text-white">I am a Software Developer from Birmingham, UK. Dedicated and Solution Oriented, I enjoy enjoy the process as much as the outcome.</p>
+                      <div class="mt-10 flex items-center justify-center gap-x-6">
+                        <a href="#proj_one" class="rounded-md bg- px-3.5 py-2.5 text-sm duration-200 font-semibold text-white hover:bg-mint focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">My Projects</a>
+                        <!-- <a href="#" class="text-sm font-semibold leading-6 text-black">About Me <span aria-hidden="true">→</span></a> -->
+                      </div>
+                    </div>
+                    <div class="links">
+                      <div class="px-4 py-10 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-10">
+
+                        <div class="flex flex-row items-center justify-center gap-5">
+                          <a href="">
+                            <div>
+                              <div class="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-indigo-50">
+                                <?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg height="100%" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;" version="1.1" viewBox="0 0 512 512" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z"/></svg>
+                              </div>
+                            </div>
+                          </a>
+
+                          <a href="">
+                            <div>
+                              <div class="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-indigo-50">
+                                <?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="100px" height="100px">    <path d="M17.791,46.836C18.502,46.53,19,45.823,19,45v-5.4c0-0.197,0.016-0.402,0.041-0.61C19.027,38.994,19.014,38.997,19,39 c0,0-3,0-3.6,0c-1.5,0-2.8-0.6-3.4-1.8c-0.7-1.3-1-3.5-2.8-4.7C8.9,32.3,9.1,32,9.7,32c0.6,0.1,1.9,0.9,2.7,2c0.9,1.1,1.8,2,3.4,2 c2.487,0,3.82-0.125,4.622-0.555C21.356,34.056,22.649,33,24,33v-0.025c-5.668-0.182-9.289-2.066-10.975-4.975 c-3.665,0.042-6.856,0.405-8.677,0.707c-0.058-0.327-0.108-0.656-0.151-0.987c1.797-0.296,4.843-0.647,8.345-0.714 c-0.112-0.276-0.209-0.559-0.291-0.849c-3.511-0.178-6.541-0.039-8.187,0.097c-0.02-0.332-0.047-0.663-0.051-0.999 c1.649-0.135,4.597-0.27,8.018-0.111c-0.079-0.5-0.13-1.011-0.13-1.543c0-1.7,0.6-3.5,1.7-5c-0.5-1.7-1.2-5.3,0.2-6.6 c2.7,0,4.6,1.3,5.5,2.1C21,13.4,22.9,13,25,13s4,0.4,5.6,1.1c0.9-0.8,2.8-2.1,5.5-2.1c1.5,1.4,0.7,5,0.2,6.6c1.1,1.5,1.7,3.2,1.6,5 c0,0.484-0.045,0.951-0.11,1.409c3.499-0.172,6.527-0.034,8.204,0.102c-0.002,0.337-0.033,0.666-0.051,0.999 c-1.671-0.138-4.775-0.28-8.359-0.089c-0.089,0.336-0.197,0.663-0.325,0.98c3.546,0.046,6.665,0.389,8.548,0.689 c-0.043,0.332-0.093,0.661-0.151,0.987c-1.912-0.306-5.171-0.664-8.879-0.682C35.112,30.873,31.557,32.75,26,32.969V33 c2.6,0,5,3.9,5,6.6V45c0,0.823,0.498,1.53,1.209,1.836C41.37,43.804,48,35.164,48,25C48,12.318,37.683,2,25,2S2,12.318,2,25 C2,35.164,8.63,43.804,17.791,46.836z"/></svg>
+                              </div>
+                            </div>
+                          </a>
+
+
+                          
+                  </div>
+
+                </div>
+              </div>
+        </section>
+    
+        <div>
+          <div id="proj_one" class="flex py-4 justify-between">
+            <p class="font-bold uppercase p-2 text-white">Jemek Solicitors</p>
+            <a href="https://www.jemeksolicitors.co.uk/home" alt="jemek solicitors link">
+              <div class=" bg-mint duration-300 hover:bg-green-500">
+                <p class="font-bold p-2 w-full text-white  hover:font-extrabold hover:pl-4 duration-300 hover:-translate-x-2" >JEMEK SOLICITORS.COM</p>
+              </div>
+              
+            </a>
+          </div>
+          
+          <section class="project-section jemek">
+          </section>
+          <section class="project-section jemek-two">
+          </section>
+        </div>
+
+
+        <div>
+          <div class="flex py-4 mt-20 items-center justify-between">
+            <p class="font-bold uppercase  text-white">Odessio</p>
+            <a href="https://bitterostrich.github.io/my-hobby-site/" alt="jemek solicitors link">
+              <div class=" bg-mint duration-300 hover:bg-green-500">
+                <p class="font-bold p-2 w-full text-white uppercase hover:font-extrabold hover:pl-4 duration-300 hover:-translate-x-2" >odessio.co.uk</p>
+              </div>
+            </a>
+          </div>
+          
+          <section class="project-section odessio">
+          </section>
+          <section class="project-section odessio-two">
+          </section>
+        </div>
+
+        <section class="carosel">
+
+          <div class="more_proj">
+            <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-lg md:px-24 lg:px-8 lg:py-20">
+              <div class="flex text-lg cursor-text space-x-1 justify-center pb-8">
+                <span class="hover:text-mint  text-white font-bold duration-200">A</span>
+                <span class="opacity-0">/</span>
+                <span class="hover:text-mint  text-white font-bold duration-200">F</span>
+                <span class="hover:text-mint  text-white font-bold duration-200">E</span>
+                <span class="hover:text-mint  text-white font-bold duration-200">W</span>
+                <span class="opacity-0">/</span>
+                <span class="hover:text-mint text-white font-bold duration-200">F</span>
+                <span class="hover:text-mint text-white font-bold duration-200">U</span>
+                <span class="hover:text-mint text-white font-bold duration-200">N</span>
+                <span class="opacity-0">/</span>
+                <span class="hover:text-mint text-white font-bold duration-200">P</span>
+                <span class="hover:text-mint text-white font-bold duration-200">R</span>
+                <span class="hover:text-mint text-white font-bold duration-200">O</span>
+                <span class="hover:text-mint text-white font-bold duration-200">J</span>
+                <span class="hover:text-mint text-white font-bold duration-200">E</span>
+                <span class="hover:text-mint text-white font-bold duration-200">C</span>
+                <span class="hover:text-mint text-white font-bold duration-200">T</span>
+                <span class="hover:text-mint text-white font-bold duration-200">S</span>
+                <span class="opacity-0">/</span>
+                <!-- <h3 class="uppercase font-bold text-white">A Few Fun Projects</h3> -->
+              </div>
+              
+              <div class="grid gap-8 row-gap-5 md:grid-cols-2">
+                
+                <div>
+                  <div class="item-card cursor-pointer" id="hoverArea">
+                    <video class="card-video" id="video_one" src="/assets/chess_piece_video.mp4" autoplay loop muted playsinline></video>
+                  <div id="carousel" class="relative hidden p-px overflow-hidden transition duration-300 transform border rounded shadow-sm hover:scale-105 group hover:shadow-xl">
+                    <div class="relative flex flex-col h-full p-5 bg-white rounded-sm lg:items-center lg:flex-row">
+
+    
+                      <div class="flex flex-col justify-between flex-grow">
+                        <div>
+                          <h6 class="mb-2 font-semibold leading-5">
+                            A Game OF Chess
+                          </h6>
+                          <p class="mb-2 text-sm text-gray-900">
+                            A traditional game of chess. 
+                          </p>
+                        </div>
+                        <a href="/" aria-label="" class="inline-flex items-center text-sm font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">Learn more</a>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+
+              
+                <div>
+                  <div class="item-card cursor-pointer" id="hoverArea_two">
+                    <video class="card-video" id="video_two" src="/assets/calculator.mp4" autoplay loop muted playsinline></video>
+                  <div id="carousel_two" class="relative hidden p-px overflow-hidden transition duration-300 transform border rounded shadow-sm hover:scale-105 group hover:shadow-xl">
+                    <div class="relative flex flex-col h-full p-5 bg-white rounded-sm lg:items-center lg:flex-row">
+
+                      <div class="flex flex-col justify-between flex-grow">
+                        <div>
+                          <h6 class="mb-2 font-semibold leading-5">
+                            Casio Scientific Calculator
+                          </h6>
+                          <p class="mb-2 text-sm text-gray-900">
+                            A Casio scientific calculator emulator. 
+                          </p>
+                        </div>
+                        <a href="/" aria-label="" class="inline-flex items-center text-sm font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">Learn more</a>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+
+
+    </div>
+   
+
+</body> 
+</html>
