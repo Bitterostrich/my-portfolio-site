@@ -7,6 +7,24 @@ body {
     font-family: 'Space Mono', monospace!important;
 }
 
+.preloader-section {
+    display: flex;
+    flex-direction: column;
+    perspective: 1000px;
+}
+
+
+#h3-text {
+    animation: fade-in-fwd 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation-delay: 2s;
+}
+
+#p-text {
+    animation: slide-in-bottom 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation-delay: 2s;
+   
+}
+
 #preloader {
     position: fixed;
     top: 0;
@@ -19,7 +37,6 @@ body {
     align-items: center;
     z-index: 9999;
     font-size: 3rem;
-
 }
 
 .background_wrapper {
@@ -27,9 +44,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    
 }
-
 
 .wrapper {
     display: flex!important;
@@ -129,6 +144,25 @@ body {
 
 
 
+
+.cursor {
+    display: inline-block;
+    background-color: black;
+    width: 3px;
+    animation: blinkCursor 1s steps(1) infinite;
+}
+
+/* 
+beige: #EDEADO
+sunglow: #FFCF56 
+mint: #3AB795 
+celadon: #A0E8AF
+cambridge blue: #86BAA1 */
+
+
+/* animations */
+
+
 /* Entry */
 @-webkit-keyframes slide-in-elliptic-top-fwd {
     0% {
@@ -159,6 +193,56 @@ body {
               transform: translateY(0) rotateX(0) scale(1);
       -webkit-transform-origin: 50% 1400px;
               transform-origin: 50% 1400px;
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes fade-in-fwd {
+    0% {
+      -webkit-transform: translateZ(-80px);
+              transform: translateZ(-80px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in-fwd {
+    0% {
+      -webkit-transform: translateZ(-80px);
+              transform: translateZ(-80px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes slide-in-bottom {
+    0% {
+      -webkit-transform: translateY(1000px);
+              transform: translateY(1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(-60px);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-bottom {
+    0% {
+      -webkit-transform: translateY(1000px);
+              transform: translateY(1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(-60px);
       opacity: 1;
     }
   }
@@ -197,23 +281,49 @@ body {
       opacity: 0;
     }
   }
+  
+  @-webkit-keyframes slide-out-fwd-center {
+    0% {
+      -webkit-transform: translateZ(1);
+              transform: translateZ(1);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translateZ(600px);
+              transform: translateY(-80px) translateZ(600px) ;
+      opacity: 0;
+    }
+  }
+  @keyframes slide-out-fwd-center {
+    0% {
+      -webkit-transform: translateZ(1);
+              transform: translateZ(1);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translateZ(600px);
+              transform: translateY(-80px) translateZ(600px) ;
+              ;
+      opacity: 0;
+    }
+  }
 
+
+/* Chaining animations, in terms of position, involves changing the values of the positional properties of the each animation. For example,
+if an animation slides in and ends at a translateY(-60px) or translateZ(-60px) and you want a text to slide in and push the original text up, 
+the translate property of text-A in its keyframe at 100% needs to reflect its new position and the slide in animation of text-B needs to reflect
+the old position of text-A.  */
+
+
+
+  /* Miscellaneous  */
+  @keyframes push-up-header {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-50px); } /* Adjust this value as needed */ 
+}
 
   @keyframes blinkCursor {
     from { border-right-color: black; }
     to { border-right-color: transparent; }
 }
 
-.cursor {
-    display: inline-block;
-    background-color: black;
-    width: 3px;
-    animation: blinkCursor 1s steps(1) infinite;
-}
-
-/* 
-beige: #EDEADO
-sunglow: #FFCF56 
-mint: #3AB795 
-celadon: #A0E8AF
-cambridge blue: #86BAA1 */
