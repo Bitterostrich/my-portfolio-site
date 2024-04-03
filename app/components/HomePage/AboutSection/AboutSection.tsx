@@ -12,8 +12,7 @@ const AboutSection = () => {
                         <section className="home-page-content__container-left">
                             <div className="home-page-content__left-content">
                                 <h2>About my self</h2>
-                                <p>Beginning my journey as a developer over two years ago, I have built modern websites, and created projects with customer and user benefit in mind. I pride myself as someone who pays attention to detail, prioritising user experience and application funtionality. 
-                                    I am a self-taught developer and I believe learning should be 
+                                <p> 
                                 </p>
                             </div>
                         </section>

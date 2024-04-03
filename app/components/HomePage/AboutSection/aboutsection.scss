@@ -9,8 +9,6 @@
         flex: 1 1 50%;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-    
     }
 
     &__blue-box-wrapper {
@@ -26,7 +24,7 @@
 
     &__blue-box {
         position: absolute;
-        top: 50%;
+        top: 20%;
         right: -30px; 
         z-index: 1;
       
