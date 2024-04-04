@@ -5,6 +5,8 @@ import HeroSection from './HeroSection/HeroSection'
 
 import AboutSection from './AboutSection/AboutSection'
 
+import ProjectsSection from './ProjectsSection/ProjectsSection'
+
 
 const HomePage = () => {
     return (
@@ -12,6 +14,7 @@ const HomePage = () => {
         <main className="home-page">
             <HeroSection />
             <AboutSection />
+            <ProjectsSection />
         </main>
         </>
     )

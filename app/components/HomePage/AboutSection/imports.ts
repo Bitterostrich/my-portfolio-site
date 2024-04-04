@@ -1,3 +1,3 @@
-import ProfilePicture from '/public/images/portfolio-picture.jpg'
+import ProfilePicture from '/public/assets/images/portfolio-picture.jpg'
 
 export {ProfilePicture}
