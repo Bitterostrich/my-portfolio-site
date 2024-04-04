@@ -26,20 +26,54 @@
         flex-direction: column;
         box-shadow: 0px 10px 10px -10px;
         border-radius: 10px;
-    
-        img {
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-        }
+
       
     }
 
     &__project-item-wrapper {
-
         width: 100%;
+
+        &:hover {
+            .category {
+                opacity: 0;
+                transform: translateY(-20px) ;
+                transition: transform 0.5s, opacity 0.4s;
+
+            }
+            .option {
+                opacity: 1;
+                transform: translateY(0) ;
+                transition: transfrom 0.5s, opacity 0.4s
+            }
+
+            .project-image {
+                transform: scale(1.05);
+                transition: all 0.5s ease;
+            }
+
+
+        }
+    }
+
+    &__project-item-image {
+        overflow: hidden;
+        line-height: 0;
+        .project-image {
+
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            cursor: pointer;
+           
+            height:100%;
+            width: 100%;
+            transform: scale(1.00);
+            transition: all 0.5s ease-in-out;
+
+    }
     }
 
     &__project-item-content {
+
         border-bottom-right-radius: 10px;
         border-bottom-left-radius: 10px;
         background-color:var(--eerie-black);
@@ -52,15 +86,31 @@
 
     &__project-item-text {
         display: flex;
+        position: relative;
+        height: 1.5rem;
+  
+
+        .category, .option {
+            display: block;
+            position: absolute;
+            top: 0;
+            left:0;
+        }
 
         .category {
             opacity: 1;
-            transform: translateY(-100vh) scale(0)
+            transform: translateY(0);
+            transition: transform 0.5s, opacity 0.4s;
             
         }
 
         .option {
-            opacity: 1;
+            opacity: 0;
+            transform: translateY(20px) ;
+            transition: transform 0.5s, opacity 0.4s;
+
+            
+ 
         }
     }
 

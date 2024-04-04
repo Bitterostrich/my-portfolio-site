@@ -45,6 +45,7 @@ const ProjectsSection = () => {
                     {projects.map((project, index) => (
                     <div key={index} className="home-page-content__project-item-wrapper">
                     <div className="home-page-content__project-item">
+                        <div className="home-page-content__project-item-image">
                         <Image
                         alt={`image for ${project.name}`}
                         style={{
@@ -53,9 +54,9 @@ const ProjectsSection = () => {
                             objectFit: "cover"
                                             }}
                         src={project.image}
-                        className="home-page-content__project-item-image"
+                        className="project-image"
                         />
-                        
+                        </div>
                         <div className="home-page-content__project-item-wrapper">
                         <div className="home-page-content__project-item-content">
                             <h3>{project.name}</h3>
