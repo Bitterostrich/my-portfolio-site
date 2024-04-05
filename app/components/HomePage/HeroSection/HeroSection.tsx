@@ -39,7 +39,7 @@ const HeroSection = () => {
                 <div className="home-page-hero__content">
                     <div className="home-page-hero__typewriter"><span id="typewriter">{typewriterText}</span><span className="home-page-hero__typewriter-cursor"></span></div>
                     
-                    <h1>Frontend Developer</h1>
+                    <h1>Frontend Developer,Backend Enthusiast, Lifetime learner</h1>
                     <p>Dedicated and Solution Oriented, I enjoy the process as much as the outcome.</p>
                     <div className="home-page-hero__media">
                         <LinkedInIcon className="home-page-hero__icon"/>
