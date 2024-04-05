@@ -1,0 +1,30 @@
+.home-page-content {
+    &__skills-container {
+        min-height: 40vh!important;
+    }
+
+    &__skills {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    &__skills-content {
+        padding: 3%;
+    }
+
+    &__icon-headline {
+        display: flex;
+        align-items: center;
+
+        h5 {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.icon {
+    padding: 1%;
+    stroke: black;
+    height: 5rem;
+    width: 5rem;
+}
