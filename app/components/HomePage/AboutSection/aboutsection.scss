@@ -1,0 +1,54 @@
+.home-page-content {
+    &__container {
+        display: flex;
+    }
+
+    &__container-left,&__container-right {
+        display: flex;
+        position: relative;
+        flex: 1 1 50%;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__blue-box-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+
+    }
+
+    &__blue-box {
+        position: absolute;
+        top: 20%;
+        right: -30px; 
+        z-index: 1;
+      
+        background-color: var(--cerulean);
+        height: 60%;
+        width: 80%;
+        float: right;
+    }
+
+
+
+    &__right-content {
+        display: flex;
+    }
+
+    &__left-content {
+        p {
+            color: black;
+        }
+    }
+}
+
+.content-image {
+    position: relative;
+    z-index:99;
+    position: relative;
+}
