@@ -7,20 +7,20 @@ const projects = [
     {
         name:"Jemek Solicitors Limited",
         category: "Web Development",
-        option: "Show Project ",
+        option: "Case Study",
         image: JemekSolicitors
     },
 
     {
         name:"Digital Spaniel",
         category: "Web Development",
-        option: "Show Project",
+        option: "Case Study",
         image: DigitalSpaniel
     },
     {
         name:"A Game Of Hangman",
         category: "Game/Web Development",
-        option: "Show Project",
+        option: "Case Study",
         image: Hangman
     }
 
@@ -31,7 +31,7 @@ const ProjectsSection = () => {
 
     
 
-    const [showOptions, setShowOptions] = useState()
+   
 
     return (
         <section className="home-page-projects">
@@ -40,7 +40,7 @@ const ProjectsSection = () => {
             <div className="home-page-content__single-container container-1980">
             <section className="home-page-content__header">
                     <h2>My Work</h2>
-                        </section>
+            </section>
                 <section className="home-page-content__projects">
                     {projects.map((project, index) => (
                     <div key={index} className="home-page-content__project-item-wrapper">

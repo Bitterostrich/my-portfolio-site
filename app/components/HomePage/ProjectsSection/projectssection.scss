@@ -1,30 +1,37 @@
+
+.home-page-projects {
+    min-height: 100vh;
+}
+
 .home-page-content {
     &__projects {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-gap: 40px;
+        grid-gap: 30px;
+
   
 
         :nth-child(1) {
-            grid-column: 1 / span 2;
-            grid-row: 1;
+            grid-column: span 2;
+            grid-row: 1 ;
         }
 
         :nth-child(2) {
-            grid-column: 2; // Places this item in the third column
+            grid-column: 1; // Places this item in the third column
             grid-row: 2; // Explicitly place it on the first row
         }
 
         :nth-child(3) {
-            grid-column: 1 ;
+            grid-column: 2;
             grid-row: 2;
         }
     }
 
+
     &__project-item {
         display: flex;
         flex-direction: column;
-        box-shadow: 0px 10px 10px -10px;
+        box-shadow: 0px 10px 10px -16px;
         border-radius: 10px;
 
       
@@ -60,8 +67,8 @@
         line-height: 0;
         .project-image {
 
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
             cursor: pointer;
            
             height:100%;
@@ -74,12 +81,12 @@
 
     &__project-item-content {
 
-        border-bottom-right-radius: 10px;
-        border-bottom-left-radius: 10px;
-        background-color:var(--eerie-black);
+        border-bottom-right-radius: 4px;
+        border-bottom-left-radius: 4px;
+        background-color:var(--eagle-grey);
         padding: 5%;
         h3, p {
-            color: white;
+            color: var(--eerie-black);
         }
 
     }
@@ -105,11 +112,23 @@
         }
 
         .option {
+            display: block;
             opacity: 0;
             transform: translateY(20px) ;
             transition: transform 0.5s, opacity 0.4s;
 
-            
+            &::after {
+                content: "";
+                position: absolute;
+                left: 100%;
+                top: 50%;
+                height: 2px;
+                width: 50px;
+                margin-left: 20px;
+                background-color: var(--eerie-black);
+                color: black;
+
+            }
  
         }
     }
