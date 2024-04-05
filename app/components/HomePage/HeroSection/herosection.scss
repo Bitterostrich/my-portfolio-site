@@ -9,6 +9,8 @@
 }
 
 .home-page-hero {
+    min-height: 100vh;
+
     &__container {
         position: relative;
         display: flex;

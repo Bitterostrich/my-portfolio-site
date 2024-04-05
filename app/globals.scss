@@ -5,6 +5,7 @@
   --white: #FFFFFF;
   --flame: #E24E1B;
   --cerulean: #2978A0;
+  --eagle-grey: #f8fafc;
 }
 
 * {
@@ -44,7 +45,7 @@ h1 {
   font-size: clamp(1.5rem, 10vw, 4rem)
 }
 
-p, h1, ul, li, ol, a {
+ h1, ul, li, ol, a {
   color: var(--white)
 }
 
