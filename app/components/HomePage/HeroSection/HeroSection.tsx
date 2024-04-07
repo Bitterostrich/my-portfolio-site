@@ -9,8 +9,8 @@ const HeroSection = () => {
     const [typewriterText, setTypewriterText] = useState<string>('')
 
     useEffect(() => {
-        const text = "Tech Stack: Next.js, MongoDB, Node, Flask, SASS"
-        const typeSpeed = 150;
+        const text = "I like to build scalable and resuable frontend products."
+        const typeSpeed = 60;
         let index = 0;
 
         let timer: number;
@@ -37,9 +37,12 @@ const HeroSection = () => {
         <section className="home-page-hero">
             <div className="home-page-hero__container container-1980">
                 <div className="home-page-hero__content">
-                    <div className="home-page-hero__typewriter"><span id="typewriter">{typewriterText}</span><span className="home-page-hero__typewriter-cursor"></span></div>
+                   
                     
-                    <h1>Frontend Developer,Backend Enthusiast, Lifetime learner</h1>
+                    <h1>Frontend Developer.</h1>
+                  
+                        <span id="typewriter">Frontend Developer with Backend Experience, I craft scalable applications prioritising UX/UI.</span>
+                    
                     <p>Dedicated and Solution Oriented, I enjoy the process as much as the outcome.</p>
                     <div className="home-page-hero__media">
                         <LinkedInIcon className="home-page-hero__icon"/>

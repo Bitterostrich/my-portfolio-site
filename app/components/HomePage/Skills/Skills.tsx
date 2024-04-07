@@ -6,25 +6,26 @@ const skills = [
     {
         title: "Software Development",
         icon: <ComputerIcon />,
-        description: "Specialised in Objected-Oriented programming using JavaScript, Typescript & Python."
+        description: "Specialised in Objected-Oriented programming across JavaScript, Typescript & Python."
     },
 
     {
-        title: "Frontend Development: React, Redux/Context API for state management, Next.js, TypeScript",
+        title: "Frontend Development",
+        titleTwo: "React, Next.JS, TypesScript",
         icon: <ReactIcon />,
-        description: "Increasingly Passionate about creating engaging user interfaces leveraging Figma and Excalidraw. With over two years experience in HTML, CSS, SCSS, JavaScript and the React and Next.js frameworks."
+        description: "Passionate about UX/UI leveraging Figma and Excalidraw. With over two years of experience crafting responsive user interfaces using HTML, CSS, SCSS, JavaScript, TypeScript and the React and Next.js frameworks."
     },
 
     {
-        title: "Backend: MongoDB, Supabase",
+        title: "Backend Development",
         icon: <DatabaseIcon />,
-        description: "Experienced in designing robust APIs using Flask & Express.js. I am also experienced in database management, building scalable and maintainable user solutions."
+        description: "Experienced in designing robust APIs using Flask & Express.js, I excel in database solutions using MongoDB and Supabase for scalable and efficient backends."
     },
 
     {
-        title: 'Tools: Github, Visual Studio Code, cPanel, Vercel',
+        title: 'Development Tools',
         icon: <ToolIcon />,
-        description: ""
+        description: "I leverage Ubuntu for my daily tasks. I use Git for version control, and I use cPanel for hosting. I am also familiar with Vercel and can host static websites with it."
     }
 ]
 
@@ -34,6 +35,9 @@ const Skills = () => {
             <div className="home-page-content__wrapper">
                 <div className="home-page-content__canvas">
                     <div className="home-page-content__skills-container container-1980">
+                        <section className="home-page-content__headline">
+                            <h2>My Expertise</h2>
+                        </section>
                         <section className="home-page-content__skills">
                             
                                 {skills.map((item, index) => (
@@ -45,7 +49,7 @@ const Skills = () => {
                                         <h5>{item.title}</h5>
                                      </div>
                                      <div className="home-page-content__text">
-                                        {item.description}
+                                        <p>{item.description}</p>
                                      </div>
                                      </div>
                                 ))}

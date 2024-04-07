@@ -6,6 +6,8 @@
   --flame: #E24E1B;
   --cerulean: #2978A0;
   --eagle-grey: #f8fafc;
+  --prussian-blue: #032333;
+  --orange:#F3A712;
 }
 
 * {
@@ -38,12 +40,22 @@ a, li, ul, ol {
   max-width: 1980px;
   min-height: 100vh;
   margin: 0 auto;
-  padding: 5%;
+  padding: 5% 5%;
 }
 
 h1 {
-  font-size: clamp(1.5rem, 10vw, 4rem)
+  font-size: clamp(3rem, 3vw, 4rem)
 }
+
+h2 {
+  font-size: clamp(3rem, 3vw, 3.5rem)
+}
+
+p, span {
+  font-size: clamp(1.1rem, 3vw, 1.4rem);
+}
+
+
 
  h1, ul, li, ol, a {
   color: var(--white)

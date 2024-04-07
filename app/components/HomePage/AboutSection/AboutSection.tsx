@@ -11,9 +11,15 @@ const AboutSection = () => {
                     <div className="home-page-content__container container-1980">
                         <section className="home-page-content__container-left">
                             <div className="home-page-content__left-content">
+                                <div className="header">
                                 <h2>About my self</h2>
-                                <p> 
+                                </div>
+                               <div>
+                               <p>
+                                
                                 </p>
+                               </div>
+
                             </div>
                         </section>
                         <section className="home-page-content__container-right">
