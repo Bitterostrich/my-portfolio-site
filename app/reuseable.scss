@@ -1,10 +1,16 @@
 .home-page-content {
     &__container {
         display: flex;
+        flex-direction: column;
+
+        @media(min-width: 768px) {
+            flex-direction: row;
+        }
     }
     &__single-container {
         display: flex;
-        flex-direction: column
+        flex-direction: column;
+
     }
 
     &__container-left,&__container-right {

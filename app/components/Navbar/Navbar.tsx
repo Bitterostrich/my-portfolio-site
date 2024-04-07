@@ -61,7 +61,7 @@ const NavBar = () => {
         <nav className={`${"navbar"} ${showNavbar ? "show-navbar" : "hide-navbar"}`}>
             <div className="navbar__container">
             <Link href="/" passHref>
-                <span className="navbar__logo">John Duru</span>
+                <span className="navbar__logo">BITTEROSTRICH</span>
             </Link>
 
             <button onClick={() => {setIsActive(!isActive)}} className="navbar__burger-menu">
