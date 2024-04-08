@@ -1,6 +1,8 @@
 .home-page-about {
     min-height: 100vh;
     position: relative;
+    scroll-snap-align: center;
+    scroll-behavior: smooth;
   
     background: linear-gradient(110deg, var(--prussian-blue) 80%, var(--orange) 30%);
     

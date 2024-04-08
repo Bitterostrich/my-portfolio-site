@@ -1,5 +1,9 @@
-// .home-page {
-//     &__background {
-//         background-color: var(--eerie-black)
-//     }
-// }
+.home-page {
+    &__background {
+        scroll-snap-align: start;
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+        height: 100vh;
+        scroll-behavior: smooth;
+    }
+}
