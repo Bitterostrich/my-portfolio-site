@@ -11,14 +11,21 @@ const AboutSection = () => {
                     <div className="home-page-content__container container-1980">
                         <section className="home-page-content__container-left">
                             <div className="home-page-content__left-content">
-                                <div className="header">
-                                <h2>About my self</h2>
-                                </div>
-                               <div>
-                               <p>
-                                
+                                <div className="home-page-content__about-text-container">
+                                <div className="about-top">
+                                <h2>An Ongoing Story,</h2>
+                                <p>For over two years, I have had the pleasure of assisting organisations in navigating the digital landscape, modernising the
+                                    online presence of their organisation. From initial consulations to the development and deployment of modern sphisticated websites, I remain focused on exceeding client expectations. 
                                 </p>
-                               </div>
+                                <p>In this rapidly evolving digital era, my commitment is to continue learning, adapting, and delivering impactful digital experiences. By staying at the forefront of technological advancements and embracing collaboration, I aim to contribute to the success of businesses poised for digital transformation.</p>
+                                </div>
+                               {/* <div className="about-bottom">
+                               <p>
+                                No one
+                                </p>
+                               </div> */}
+                                </div>
+  
 
                             </div>
                         </section>

@@ -1,4 +1,33 @@
 .home-page-about {
     min-height: 100vh;
-    background: linear-gradient(90deg, var(--orange) 60%, var(--prussian-blue) 30%);
+    position: relative;
+  
+    background: linear-gradient(110deg, var(--prussian-blue) 80%, var(--orange) 30%);
+    
+    @media(min-width: 768px) {
+        background: linear-gradient(90deg, var(--prussian-blue) 70%, var(--orange) 30%);
+    }
+}
+
+.home-page-content {
+    &__about-text-container {
+        display: flex;
+        flex-direction: column;
+        @media(min-width: 768px) {
+            margin-right: 2vw;
+        }
+        
+    }
+}
+
+.about-top {
+    h2 {
+        color:var(--orange); 
+    }
+    p {
+        margin: 20px 0px;
+        color: var(--eagle-grey);
+        font-weight: bold;
+        line-height: 1.6;
+    }
 }

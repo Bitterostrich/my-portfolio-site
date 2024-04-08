@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
-import { Inter, Space_Mono } from "next/font/google";
+import { Inter, Space_Mono, Work_Sans } from "next/font/google";
 import "./globals.scss";
 import "./reuseable.scss"
 import React from "react";
 import NavBar from "./components/Navbar/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
+
+
+const work_sans = Work_Sans({ subsets: ["latin"] });
 
 const space_mono = Space_Mono({ subsets: ["latin"], weight: ['400', '700']})
 

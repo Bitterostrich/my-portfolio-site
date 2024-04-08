@@ -49,8 +49,9 @@
     &__text {
         margin: 10px 0px;
         p {
-            line-height: 40px;
+            line-height: 1.6;
             color: var(--prussian-blue);
+            font-weight: 700;
         }
     }
 }
