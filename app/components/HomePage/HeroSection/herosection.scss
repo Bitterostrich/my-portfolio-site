@@ -11,6 +11,8 @@
 .home-page-hero {
     min-height: 100vh;
     background-color: var(--prussian-blue);
+    scroll-snap-align: start;
+    scroll-behavior: smooth;
 
     &__container {
         position: relative;

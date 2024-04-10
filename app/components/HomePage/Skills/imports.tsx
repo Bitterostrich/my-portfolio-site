@@ -7,7 +7,7 @@ const ComputerIcon = (props: SVGProps<SVGSVGElement>) => {
     return (
 <svg 
 {...defaultSizeProps}{...props} 
-version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 214.3061 176.9724" enable-background="new 0 0 214.3061 176.9724" xmlSpace="preserve">
+version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 214.3061 176.9724" enableBackground="new 0 0 214.3061 176.9724" xmlSpace="preserve">
 <g>
 	<path d="M123.8683,85.2c-0.1489,2.8359-1.2386,5.4045-2.9494,7.4228h76.3871v83.5h11v-83.5h6v-8.6667h-90.4356
 		C123.8896,84.3665,123.8903,84.7812,123.8683,85.2z"></path>

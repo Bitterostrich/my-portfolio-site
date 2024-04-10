@@ -37,11 +37,11 @@ const ProjectsSection = () => {
             <div className="home-page-content__canvas">
             <div className="home-page-content__single-container container-1980">
             <section className="home-page-content__header">
-                <div className="header">
-                <h2>My Work</h2>
+                <div className="project-header">
+                <h2>Projects & Work</h2>
                 </div>
-                <div className="text">
-                    <p>A few projects I have worked on over the years </p>
+                <div className="project-text">
+                    <p>A few projects I have been working on lately.</p>
                 </div>
             </section>
                 <section className="home-page-content__projects">
@@ -64,7 +64,10 @@ const ProjectsSection = () => {
                         <div className="home-page-content__project-item-content">
                             <h3>{project.name}</h3>
                             <div className="project-tech">{project.tech.map((item, index) => (
-                                <p>{item}</p>
+                                <div key={index} className="project-tech-items">
+                                           <p>{item}</p>
+                                </div>
+                         
                             ) )}</div>
                             <div className="home-page-content__project-item-text"><p className="category">{project.category}</p><p className="option">{project.option}</p></div>
                             

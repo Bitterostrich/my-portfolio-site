@@ -37,14 +37,30 @@ a, li, ul, ol {
 }
 
 .container-1980 {
-  max-width: 1980px;
+  max-width: 1500px;
   min-height: 100vh;
   margin: 0 auto;
-  padding: 5% 5%;
+  padding: 15% 5%;
+
+  @media(min-width: 768px) {
+    padding: 5% 5%;
+  }
+}
+
+.inter-font {
+  font-family: 'Inter', sans-serif;
+}
+
+.space-mono-font {
+  font-family: 'Space Mono', monospace;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Mono', monospace;
 }
 
 h1 {
-  font-size: clamp(3rem, 3vw, 4rem)
+  font-size: clamp(3rem, 3vw, 4rem);
 }
 
 h2 {
@@ -52,7 +68,9 @@ h2 {
 }
 
 p, span {
-  font-size: clamp(1.1rem, 3vw, 1.4rem);
+  font-size: clamp(1rem, 1.5vw, 1.1rem);
+  font-family: 'Work Sans', sans-serif;
+  letter-spacing: 0.3px;
 }
 
 

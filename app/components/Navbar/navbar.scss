@@ -83,8 +83,9 @@
         margin: 10px;
         width: 50px;
         height: 50px;
-        background-color:white;
-        border-radius: 10px;
+        background-color:transparent;
+        border-radius: none;
+        border:none;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -98,13 +99,24 @@
 
     &__inactive-burger-menu {
         width: 100%;
-        &::before, &::after {
+        &::before{
             content: "";
             display: block;
-            width: 40%;
+            width: 45%;
             height: 2px;
-            background-color: black;
+            background-color: var(--orange);
             margin: auto;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            width: 60%;
+            height: 2px;
+            background-color: var(--orange);
+            margin: -10px auto auto auto;
             position: relative;
             transition: all 0.3s ease;
         }
@@ -121,17 +133,28 @@
 
     &__active-burger-menu {
         width: 100%;
-        &::before, &::after {
+        &::before {
             content: "";
             display: block;
-            width: 40%;
-            background-color: black;
+            width: 60%;
+            background-color: var(--orange);
             height: 2px;
             margin: auto;
             position: relative;
             transition: all 0.3s ease;
-
         }
+
+        &::after {
+            content: "";
+            display: block;
+            width: 60%;
+            background-color: var(--orange);
+            height: 2px;
+            margin: auto;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
 
         &::before {
             top: 0px;
