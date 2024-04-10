@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Space_Mono, Work_Sans } from "next/font/google";
 import "./globals.scss";
-import "./reuseable.scss"
+import "./reuseable.scss";
+import "./projects.scss";
 import React from "react";
 import NavBar from "./components/Navbar/Navbar";
 
