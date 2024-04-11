@@ -1,4 +1,4 @@
-"use client"
+
 
 import { useEffect } from 'react';
 import {useRouter, useSearchParams} from 'next/navigation';
@@ -8,7 +8,7 @@ import JemekSolicitorsPage from '@/app/components/Projects/JemekSolicitors/jemek
 
 
 const ProjectsPage = ({params}: {params: {project: string}}) => {
-    const router = useRouter();
+
 
     const project = params.project
 

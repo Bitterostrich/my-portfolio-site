@@ -1,0 +1,60 @@
+.project-page-content {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        flex: 1 1;
+    }
+
+    &__body {
+        display: flex;
+        width: 100%;
+    }
+
+    &__body-left, &__body-right {
+        display: flex;
+        justify-content: left;
+        flex: 1 1;
+    }
+
+    &__body-left {
+        margin-right: 2.5vw;
+    }
+
+    &__body-right {
+        flex-direction: column
+    }
+}
+
+.project-metadata {
+    display: flex;
+    h6, p {
+        color: black;
+    }
+
+    h6 {
+        font-size: clamp(1rem, 3vw, 1.3rem);
+    }
+    li {
+        margin-right: 2.5vw;
+    }
+
+    &__external-link {
+        margin-top: 2vh;
+        transition: transform 0.4s ease;
+
+        &:hover {
+            transform: translateX(10px);
+        }
+        a {
+        color: black;
+        border: 1px solid;
+        padding: 5px;
+        transition: transform 0.8s ease;
+
+   
+
+
+        }
+    }
+}

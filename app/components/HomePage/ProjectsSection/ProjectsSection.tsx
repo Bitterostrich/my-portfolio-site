@@ -3,7 +3,7 @@ import Image from 'next/image';
 import {JemekSolicitors, Hangman, DigitalSpaniel} from './imports';
 import React, {useState} from 'react';
 import Link from 'next/link';
-import { link } from 'fs';
+
 
 const projects = [
     {
@@ -78,16 +78,10 @@ const ProjectsSection = () => {
                             
                         </div>
                         </div>
-
-
                         </div>
                     </div>
-
-                   
                     ))}
                         </section>
-
-
                 </div>
                 </div>
             </div>
