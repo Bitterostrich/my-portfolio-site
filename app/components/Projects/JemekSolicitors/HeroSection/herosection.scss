@@ -1,0 +1,94 @@
+.projects-page-hero {
+    background-color: var(--prussian-blue);
+}
+
+.project-page-content {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        flex: 1 1;
+    }
+
+    &__headline {
+        h2 {
+            color: var(--orange);
+            line-height: 1.3;
+        }
+    }
+
+    &__body {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        @media (min-width: 768px) {
+            flex-direction: row;
+        }
+    }
+
+    &__body-left, &__body-right {
+        display: flex;
+        justify-content: left;
+        flex: 1 1;
+    }
+
+    &__body-left {
+        margin-right: 2.5vw;
+    }
+
+    &__body-right {
+        margin-top: 2.5vh;
+        flex-direction: column;
+
+        @media (min-width: 768px) {
+            margin-top: 0vh;
+        }
+    }
+}
+
+.project-metadata {
+    display: flex;
+    h6, p {
+        color: black;
+    }
+
+    h6 {
+        font-size: clamp(1rem, 3vw, 1.3rem);
+        color: var(--orange);
+    }
+
+    p {
+        color: white;
+        line-height: 1.6;
+    }
+
+    li {
+        margin-right: 2.5vw;
+    }
+
+    &__external-link {
+        margin-top: 2vh;
+        transition: transform 0.4s ease;
+
+        &:hover {
+            transform: translateX(10px);
+        }
+        a {
+        color: var(--orange);
+        border: 1px solid;
+        padding: 5px;
+        transition: transform 0.8s ease;
+        }
+    }
+
+
+
+    
+}
+
+.project-description {
+    p {
+        color: white;
+        line-height: 1.6;
+    }
+}

@@ -1,7 +1,9 @@
 import './projectssection.scss';
 import Image from 'next/image';
 import {JemekSolicitors, Hangman, DigitalSpaniel} from './imports';
-import React, {useState} from 'react'
+import React, {useState} from 'react';
+import Link from 'next/link';
+
 
 const projects = [
     {
@@ -10,6 +12,7 @@ const projects = [
         tech: ["TypeScript", "React", "Next.JS", "Django", "CSS"],
         option: "Case Study",
         image: JemekSolicitors,
+        link: "projects/jemek-solicitors-project",
     },
 
     {
@@ -18,6 +21,7 @@ const projects = [
         tech:["JavaScript", "React", "Next.JS","SCSS", "Context API"],
         option: "Case Study",
         image: DigitalSpaniel,
+        link: "projects/digital-spaniel-project",
     },
     {
         name:"A Game Of Hangman",
@@ -25,6 +29,7 @@ const projects = [
         option: "Case Study",
         tech:["React", "Next.JS","SCSS", "Redux", "Flask", "Supabase"],
         image: Hangman,
+        link: "projects/hangman-project"
     }
 
 ]
@@ -69,20 +74,14 @@ const ProjectsSection = () => {
                                 </div>
                          
                             ) )}</div>
-                            <div className="home-page-content__project-item-text"><p className="category">{project.category}</p><p className="option">{project.option}</p></div>
+                            <div className="home-page-content__project-item-text"><Link href={project.link} className="category">{project.category}</Link><Link href={project.link} className="option">{project.option}</Link></div>
                             
                         </div>
                         </div>
-
-
                         </div>
                     </div>
-
-                   
                     ))}
                         </section>
-
-
                 </div>
                 </div>
             </div>
