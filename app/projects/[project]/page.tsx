@@ -3,6 +3,8 @@
 import { useEffect } from 'react';
 import {useRouter, useSearchParams} from 'next/navigation';
 import JemekSolicitorsPage from '@/app/components/Projects/JemekSolicitors/jemeksolicitors';
+import DigitalSpanielPage from '@/app/components/Projects/DigitalSpaniel/DigitalSpaniel';
+import HangmanPage from '@/app/components/Projects/Hangman/Hangman';
 // import { useRouter } from 'next/navigation';
 
 
@@ -37,6 +39,10 @@ const ProjectsPage = ({params}: {params: {project: string}}) => {
         switch(project) {
             case 'jemek-solicitors-project':
                 return <JemekSolicitorsPage />;
+            case 'digital-spaniel-project':
+                return <DigitalSpanielPage />;
+            case 'hangman-project':
+                return <HangmanPage />;
             default:
                 return <div>Project page not found</div>
         }

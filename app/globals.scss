@@ -48,6 +48,18 @@ a, li, ul, ol {
   }
 }
 
+
+.container-1500 {
+  max-width: 1500px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 15% 5%;
+
+  @media(min-width: 768px) {
+    padding: 5% 5%;
+  }
+}
+
 .inter-font {
   font-family: 'Inter', sans-serif;
 }
