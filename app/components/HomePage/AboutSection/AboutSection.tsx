@@ -1,11 +1,44 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import './aboutsection.scss';
 import Image from 'next/image';
-import {ProfilePicture} from './imports'
+import {ProfilePicture} from './imports';
+import {useNav} from '@/app/Contexts/navbarContext' 
 
 const AboutSection = () => {
+
+    const {updateSection} = useNav()
+    const sectionRef = useRef(null)
+
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            const [entry] = entries
+
+            if (entry.isIntersecting) {
+                updateSection('about-section')
+            } else {
+                updateSection('')
+            }
+        }, {
+            threshold: 0.5
+        });
+
+        if (sectionRef.current) {
+            observer.observe(sectionRef.current);
+        }
+
+        return () => {
+            if (sectionRef.current) {
+                observer.unobserve(sectionRef.current)
+            }
+        };
+
+
+    }, [updateSection])
+
+
     return (
-        <section className="home-page-about">
+        <section ref={sectionRef} className="home-page-about" id="about-section">
             <div className="home-page-content__wrapper for-animations">
                 <div className="home-page-content__canvas for-3D-elements">
                     <div className="home-page-content__container container-1980">

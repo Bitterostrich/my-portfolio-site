@@ -39,12 +39,12 @@ const HeroSection = () => {
                 <div className="home-page-hero__content">
                    
                     
-                    <h1>Frontend Developer.</h1>
+                    <h1>John Duru, Frontend Developer.</h1>
                   
                         <span id="typewriter">Frontend Developer with Backend Experience, I craft scalable applications prioritising UX/UI.</span>
                     
-                    <p>Dedicated and Solution Oriented, I enjoy the process as much as the outcome.</p>
-                    <div className="home-page-hero__media">
+                    <p>Dedicated and Solution Oriented, I enjoy the process as much as the outcome. </p>
+                    <div className="home-page-hero__media"> 
                         <LinkedInIcon className="home-page-hero__icon"/>
                         <GitHubIcon className="home-page-hero__icon"/>
                     </div>

@@ -4,7 +4,8 @@ import "./globals.scss";
 import "./reuseable.scss";
 import "./projects.scss";
 import React from "react";
-import NavBar from "./components/Navbar/Navbar";
+import Navbar from "./components/Navbar/Navbar";
+import {NavProvider} from '@/app/Contexts/navbarContext'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,10 +22,12 @@ export const metadata: Metadata = {
 export default function RootLayout ({children}: Readonly<{children: React.ReactNode;}>) {
   return (
     <html lang="en">
+      <NavProvider>
       <body className={space_mono.className}>
-        <NavBar/>
+        <Navbar/>
         {children}
         </body>
+        </NavProvider>
     </html>
   );
 }

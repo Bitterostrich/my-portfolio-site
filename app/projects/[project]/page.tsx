@@ -1,4 +1,6 @@
+"use client"
 
+import { useNav} from '@/app/Contexts/navbarContext'
 
 import { useEffect } from 'react';
 import {useRouter, useSearchParams} from 'next/navigation';
@@ -7,16 +9,26 @@ import DigitalSpanielPage from '@/app/components/Projects/DigitalSpaniel/Digital
 import HangmanPage from '@/app/components/Projects/Hangman/Hangman';
 // import { useRouter } from 'next/navigation';
 
+interface NavProps {
+    link: string
+}
 
 
-const ProjectsPage = ({params}: {params: {project: string}}) => {
+const ProjectsPage = ({params}: {params: {project: string}, props: NavProps}) => {
 
+    const {updateProject} = useNav()
+
+    
 
     const project = params.project
 
     console.log(project)
 
     console.log(params)
+
+    useEffect(() => {
+        updateProject(project);
+    }, [project, updateProject])
 
 
 
