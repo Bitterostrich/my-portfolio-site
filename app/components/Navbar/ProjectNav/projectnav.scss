@@ -1,0 +1,11 @@
+.navbar {
+    &__menu-item {
+        svg {
+            margin-right: 20px;
+            width: 50px;
+            height: 50px;
+            fill: var(--cerulean);
+
+        }
+    }
+}
