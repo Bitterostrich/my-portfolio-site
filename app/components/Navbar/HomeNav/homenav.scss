@@ -28,6 +28,10 @@
         font-weight: bold;
     }
 
+    &__active-logo {
+        color: var(--prussian-blue);
+    }
+
 
 
 
@@ -65,17 +69,10 @@
             color: var(--prussian-blue)!important;
         }
 
-
-
-
-
-
-
         li {
             display: flex;
             margin: 20px auto;
             height: 50px;
-            border-bottom: 1px solid #f5f5f5;
             width: 100%;
 
         
@@ -101,10 +98,27 @@
 
     &__contact-items {
 
-        gap: 20px;
+        gap: 30px;
         display: flex;
         flex-direction: column;
         margin-top: 100px;
+        
+        h5, p {
+            color: var(--prussian-blue);
+        }
+
+        h5 {
+            font-size: clamp(3rem, 3vw, 3rem);
+        }
+      
+    }
+
+    &__external-links {
+        display: flex;
+        margin-top:100px;
+        gap: 20px;
+        font-size: 20px;
+
     }
 
     &__menu-item a {
@@ -136,8 +150,6 @@
             display: none;
         }
     }
-
-
 
     &__inactive-burger-menu {
         width: 100%;
@@ -179,7 +191,7 @@
             content: "";
             display: block;
             width: 60%;
-            background-color: var(--orange);
+            background-color: var(--prussian-blue);
             height: 2px;
             margin: auto;
             position: relative;
@@ -190,7 +202,7 @@
             content: "";
             display: block;
             width: 60%;
-            background-color: var(--orange);
+            background-color: var(--prussian-blue);
             height: 2px;
             margin: auto;
             position: relative;

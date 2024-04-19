@@ -48,9 +48,9 @@ const AboutSection = () => {
                                 <div className="about-top">
                                 <h2>An Ongoing Story,</h2>
                                 <p>For over two years, I have had the pleasure of assisting organisations in navigating the digital landscape, modernising the
-                                    online presence of their organisation. From initial consulations to the development and deployment of modern sphisticated websites, I remain focused on exceeding client expectations. 
+                                    online presence of their organisation. From initial consulations to the development and deployment of modern  websites, I remain focused on exceeding client expectations. 
                                 </p>
-                                <p>In this rapidly evolving digital era, my commitment is to continue learning, adapting, and delivering impactful digital experiences. By staying at the forefront of technological advancements and embracing collaboration, I aim to contribute to the success of businesses poised for digital transformation.</p>
+                                <p>In this rapidly evolving digital era, my commitment is to continue learning, adapting, and delivering impactful digital experiences. By staying informed and embracing collaboration, I aim to contribute to the success of businesses poised for digital transformation.</p>
                                 </div>
                                {/* <div className="about-bottom">
                                <p>
