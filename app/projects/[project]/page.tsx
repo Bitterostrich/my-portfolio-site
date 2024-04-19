@@ -9,12 +9,12 @@ import DigitalSpanielPage from '@/app/components/Projects/DigitalSpaniel/Digital
 import HangmanPage from '@/app/components/Projects/Hangman/Hangman';
 // import { useRouter } from 'next/navigation';
 
-interface NavProps {
-    link: string
-}
+// interface NavProps {
+//     link: string
+// }
 
 
-const ProjectsPage = ({params}: {params: {project: string}, props: NavProps}) => {
+const ProjectsPage = ({params}: {params: {project: string}}) => {
 
     const {updateProject} = useNav()
 
