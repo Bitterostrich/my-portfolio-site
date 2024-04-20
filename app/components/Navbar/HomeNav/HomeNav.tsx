@@ -87,7 +87,7 @@ const HomeNav = () => {
                 <ul className={` ${isActive ? "navbar__mobile-links" :"navbar__menu-links"}`}>
                 <div className={`${isActive ? "navbar__mobile-links-container" : "navbar__menu-links"}`}>
                 {menuItems.map((item, index) => (
-                    <li key={index} className={`${"navbar__menu-item"} ${currentSection === 'about-section' ? "navbar__menu-item-about-color" : ""}`}>
+                    <li key={index} className={`${"navbar__menu-item"} ${currentSection === 'about-section' ? "navbar__menu-item-about-color" : ""} ${isActive ? "navbar__active-menu-item" : ""}`}>
                         <Link onClick={()=>setIsActive(false)} href={item.link}>
                         {item.itemName}</Link>
                     </li>
