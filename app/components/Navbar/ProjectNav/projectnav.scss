@@ -8,4 +8,19 @@
 
         }
     }
+
+    &__mobile-links-container {
+        position: fixed;
+        top: 100px;
+        left: 0;
+        padding: 9%;
+        margin: 0 auto;
+        width: 100%;
+        min-height: 100vh;
+    }
+
+    &__external-links {
+        display: flex;
+        
+    }
 }

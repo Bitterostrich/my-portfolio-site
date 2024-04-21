@@ -28,6 +28,10 @@
         font-weight: bold;
     }
 
+    &__active-logo {
+        color: var(--prussian-blue);
+    }
+
 
 
 
@@ -61,21 +65,14 @@
         z-index: -10;
 
 
-        a, ul {
-            color: var(--prussian-blue)!important;
-        }
-
-
-
-
-
-
+        // a, ul {
+        //     color: var(--prussian-blue)!important;
+        // }
 
         li {
             display: flex;
             margin: 20px auto;
             height: 50px;
-            border-bottom: 1px solid #f5f5f5;
             width: 100%;
 
         
@@ -95,25 +92,60 @@
         margin: 0 auto;
         width: 100%;
         min-height: 100vh;
-
-
     }
 
     &__contact-items {
-
-        gap: 20px;
+        gap: 30px;
         display: flex;
         flex-direction: column;
         margin-top: 100px;
+        
+        h5, p {
+            color: var(--prussian-blue);
+        }
+
+        h5 {
+            font-size: clamp(3rem, 3vw, 3rem);
+        }
+      
+    }
+
+    &__external-links {
+        display: flex;
+        margin-top:100px;
+        gap: 20px;
+        font-size: 20px;
+
     }
 
     &__menu-item a {
-
         text-decoration: none;
         font-family: var(--work-sans);
         color: var(--orange);
         letter-spacing: 1px;
         font-weight: bold;
+        transition: all 0.8s ease;
+        position: relative;
+        display: inline-block;
+
+        &::after {
+            content: "";
+            bottom: -10px;
+            position: absolute;
+            top: 25px;
+            left: 0;
+            right: 0;
+            height: 2px;
+       
+            transform: scaleX(0);
+            background-color: var(--cerulean);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        &:hover::after {
+            transform: scaleX(1);
+        }
     }
 
     &__menu-item-about-color a {
@@ -131,13 +163,22 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        cursor: pointer;
         
         @media (min-width: 768px) {
             display: none;
         }
     }
 
+    &__active-menu-item {
+        a {
+            color: var(--prussian-blue);
 
+            &:hover {
+                color: var(--cerulean);
+            }
+        }
+    }
 
     &__inactive-burger-menu {
         width: 100%;
@@ -179,7 +220,7 @@
             content: "";
             display: block;
             width: 60%;
-            background-color: var(--orange);
+            background-color: var(--prussian-blue);
             height: 2px;
             margin: auto;
             position: relative;
@@ -190,7 +231,7 @@
             content: "";
             display: block;
             width: 60%;
-            background-color: var(--orange);
+            background-color: var(--prussian-blue);
             height: 2px;
             margin: auto;
             position: relative;

@@ -1,8 +1,10 @@
 "use client"
 import React, {useState, useEffect} from 'react';
-import './herosection.scss'
-import {LinkedInIcon, GitHubIcon} from './imports'
-
+import './herosection.scss';
+import {LinkedInIcon, GitHubIcon} from './imports';
+import Link from 'next/link';
+import{motion} from 'framer-motion';
+import {item, container} from '@/app/styles/animations/globals'
 
 const HeroSection = () => {
 
@@ -35,21 +37,30 @@ const HeroSection = () => {
     return (
         <>
         <section className="home-page-hero">
+        <motion.div
+        variants={container}
+        initial="hidden"
+        animate="visible"
+
+        className="home-page-content__wrapper for-animations">
+                <div className="home-page-content__canvas for-3D-elements">
             <div className="home-page-hero__container container-1980">
                 <div className="home-page-hero__content">
                    
                     
-                    <h1>John Duru, Frontend Developer.</h1>
+                    <motion.h1 variants={item}>John Duru, Frontend Developer.</motion.h1>
                   
-                        <span id="typewriter">Frontend Developer with Backend Experience, I craft scalable applications prioritising UX/UI.</span>
+                        <motion.span variants={item} id="typewriter">Frontend Developer with Backend Experience, I craft scalable applications prioritising UX/UI.</motion.span>
                     
-                    <p>Dedicated and Solution Oriented, I enjoy the process as much as the outcome. </p>
-                    <div className="home-page-hero__media"> 
-                        <LinkedInIcon className="home-page-hero__icon"/>
-                        <GitHubIcon className="home-page-hero__icon"/>
-                    </div>
+                    <motion.p variants={item}>Dedicated and Solution Oriented, I enjoy the process as much as the outcome. </motion.p>
+                    <motion.div variants={item} className="home-page-hero__media"> 
+                        <Link target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/john-duru-7b65672b1/"><LinkedInIcon className="home-page-hero__icon"/></Link>
+                        <Link target="_blank" rel="noreferrer" href="https://github.com/Bitterostrich"><GitHubIcon className="home-page-hero__icon"/></Link>
+                    </motion.div>
             </div>
             </div>
+            </div>
+            </motion.div>
         </section>
         </>
     )
