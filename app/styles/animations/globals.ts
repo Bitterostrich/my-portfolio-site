@@ -17,12 +17,12 @@ const container: ContainerType = {
 const item: ItemType = {
     hidden: {
         opacity: 0,
-        y: 200
+        x: -200
     },
 
     visible: {
         opacity: 1,
-        y: 0,
+        x: 0,
         transition: {
             ease: "easeInOut",
             duration: 0.8,
@@ -39,6 +39,5 @@ const item: ItemType = {
         
     }
 }
-
 
 export {container, item}
