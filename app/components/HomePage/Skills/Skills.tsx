@@ -1,6 +1,10 @@
-import React from 'react';
+"use client"
+import React, {useState, useEffect, useRef} from 'react';
 import './skills.scss';
 import {ComputerIcon, ReactIcon, DatabaseIcon, ToolIcon} from './imports'
+import{motion, useInView, useScroll} from 'framer-motion';
+import {itemY, container} from '@/app/styles/animations/globals'
+
 
 const skills = [
     {
@@ -30,27 +34,37 @@ const skills = [
 ]
 
 const Skills = () => {
+
+    const skillsRef = useRef<HTMLElement>(null)
+    const skillsRefInView = useInView(skillsRef, {margin: "-100px", once: true})
+    console.log(skillsRefInView)
+    console.log(skillsRef)
+
     return (
-        <section className="home-page-skills">
-            <div className="home-page-content__wrapper">
+        <section className="home-page-skills" ref={skillsRef}>
+            <motion.div 
+            variants={container}
+            initial="hidden"
+            animate={skillsRefInView ? "visible": "hidden"}
+            className="home-page-content__wrapper">
                 <div className="home-page-content__canvas">
                     <div className="home-page-content__skills-container container-1980">
-                        <section className="home-page-content__headline">
-                            <h2>My Expertise</h2>
-                        </section>
+                        <motion.section variants={itemY} className="home-page-content__headline">
+                            <motion.h2 >My Expertise</motion.h2>
+                        </motion.section>
                         <section className="home-page-content__skills">
                             
-                                {skills.map((item, index) => (
+                                {skills.map((skill, index) => (
                                     <div key={index} className="home-page-content__skills-content">
-                                     <div className="home-page-content__icon-headline">
-                                        <div className="icon">
-                                            {item.icon}
+                                     <motion.div variants={itemY} className="home-page-content__icon-headline">
+                                        <div  className="icon">
+                                            {skill.icon}
                                             </div>
-                                        <h5>{item.title}</h5>
-                                     </div>
-                                     <div className="home-page-content__text">
-                                        <p>{item.description}</p>
-                                     </div>
+                                        <h5>{skill.title}</h5>
+                                     </motion.div>
+                                     <motion.div variants={itemY} className="home-page-content__text">
+                                        <p>{skill.description}</p>
+                                     </motion.div>
                                      </div>
                                 ))}
                                
@@ -58,7 +72,7 @@ const Skills = () => {
                         </section>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </section>
     )
 }

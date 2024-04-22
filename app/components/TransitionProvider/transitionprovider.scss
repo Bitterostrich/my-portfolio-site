@@ -1,18 +1,24 @@
 .page-transition {
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    position: relative;
 
     &__entry {
-        height: screen;
-        width: screen;
+        overflow-x: hidden;
+        height: 100vh;
+        width: 100vw;
         background-color: var(--orange);
         z-index:50;
       
     }
     &__exit {
-        height: screen;
-        width: screen;
+
+        overflow-x: hidden;
+        height: 100vh;
+        width: 100vw;
         background-color: var(--cerulean);
         z-index: 50;
-       
     }
 
     &__pathname {
@@ -23,12 +29,11 @@
         left: 0;
         top:0;
         right: 0;
+        overflow-x: hidden;
         font-size: xx-large;
         width: fit-content;
         height: fit-content;
         text-transform: uppercase;
     }
-
-
 }
 

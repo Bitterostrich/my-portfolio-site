@@ -5,5 +5,7 @@
         overflow-y: scroll;
         height: 100vh;
         scroll-behavior: smooth;
+        width: 100vw;
+        overflow-x: hidden;
     }
 }

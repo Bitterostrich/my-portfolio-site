@@ -2,12 +2,15 @@ import React, {useState, useEffect, useRef} from 'react';
 import './aboutsection.scss';
 import Image from 'next/image';
 import {ProfilePicture} from './imports';
-import {useNav} from '@/app/Contexts/navbarContext' 
+import {useNav} from '@/app/Contexts/navbarContext';
+import{motion, useInView, useScroll} from 'framer-motion';
+import {itemY, container, picture, rotate} from '@/app/styles/animations/globals'
 
 const AboutSection = () => {
 
     const {updateSection} = useNav()
-    const sectionRef = useRef(null)
+    const sectionRef = useRef<HTMLElement>(null)
+    const aboutInView = useInView(sectionRef, {margin: '-350px', once: true})
 
 
     useEffect(() => {
@@ -39,18 +42,22 @@ const AboutSection = () => {
 
     return (
         <section ref={sectionRef} className="home-page-about" id="about-section">
-            <div className="home-page-content__wrapper for-animations">
+            <motion.div
+            variants={container}
+            initial="hidden"
+            animate={aboutInView ? "visible" : "hidden"}
+            className="home-page-content__wrapper for-animations">
                 <div className="home-page-content__canvas for-3D-elements">
                     <div className="home-page-content__container container-1980">
                         <section className="home-page-content__container-left">
                             <div className="home-page-content__left-content">
                                 <div className="home-page-content__about-text-container">
                                 <div className="about-top">
-                                <h2>An Ongoing Story,</h2>
-                                <p>For over two years, I have had the pleasure of assisting organisations in navigating the digital landscape, modernising the
+                                <motion.h2 variants={rotate}>An Ongoing Story,</motion.h2>
+                                <motion.p variants={itemY}>For over two years, I have had the pleasure of assisting organisations in navigating the digital landscape, modernising the
                                     online presence of their organisation. From initial consulations to the development and deployment of modern  websites, I remain focused on exceeding client expectations. 
-                                </p>
-                                <p>In this rapidly evolving digital era, my commitment is to continue learning, adapting, and delivering impactful digital experiences. By staying informed and embracing collaboration, I aim to contribute to the success of businesses poised for digital transformation.</p>
+                                </motion.p>
+                                <motion.p variants={itemY}>In this rapidly evolving digital era, my commitment is to continue learning, adapting, and delivering impactful digital experiences. By staying informed and embracing collaboration, I aim to contribute to the success of businesses poised for digital transformation.</motion.p>
                                 </div>
                                {/* <div className="about-bottom">
                                <p>
@@ -64,10 +71,10 @@ const AboutSection = () => {
                         </section>
                         <section className="home-page-content__container-right">
                             <div className="home-page-content__right-content">
-                            <div className="home-page-content__blue-box-wrapper">
+                            <motion.div variants={picture} className="home-page-content__blue-box-wrapper">
                             <div className="home-page-content__blue-box"></div>
-
-                            <Image 
+                            
+                            <Image
                                 alt="profile picture for john duru"
                                 src={ProfilePicture}
                                 className="content-image"
@@ -76,16 +83,13 @@ const AboutSection = () => {
                                     width: "100%",
                                     height: "50%"
                                 }}
-
                                  />
-                            </div>
-                               
-
+                            </motion.div>
                             </div>
                         </section>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </section>
     )
 }
