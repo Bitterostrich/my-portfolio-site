@@ -128,6 +128,8 @@ const HomeNav = () => {
                    )}
                    </AnimatePresence>
 
+                
+
                    {!isActive && (
                                        <ul className="navbar__menu-links">
                                        {menuItems.map((item, index) => (

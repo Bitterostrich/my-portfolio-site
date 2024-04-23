@@ -2,7 +2,9 @@
 import './projectnav.scss';
 import React, {useEffect, useState} from "react";
 import Link from 'next/link';
-import {LinkedInIcon, GitHubIcon} from './imports'
+import {LinkedInIcon, GitHubIcon} from './imports';
+import {motion, AnimatePresence} from 'framer-motion'
+import {container, item, content} from '@/app/styles/animations/nav'
 
 
 const menuItems = [
@@ -37,10 +39,15 @@ const ProjectNav = () => {
     useEffect(() => {
         const handleMenuDisplay = () => {
             const screenSize = window.innerWidth
+            console.log(screenSize)
             if (screenSize > 768) {
                 setIsActive(false)
+               
             }
+
+   
         }
+
         window.addEventListener("resize", handleMenuDisplay)
         return () => window.removeEventListener("resize", handleMenuDisplay)
     }, [])
@@ -48,6 +55,7 @@ const ProjectNav = () => {
     useEffect(() => {
         const handleNavScroll = () => {
             const currentScrollY = window.scrollY
+            
 
             if(currentScrollY === 0) {
                 setShowNavbar(true)
@@ -55,20 +63,36 @@ const ProjectNav = () => {
                 setShowNavbar(false)
             }
             setLastScrollY(currentScrollY)
+          
         }
 
+       
         window.addEventListener('scroll', handleNavScroll)
 
         return () => window.removeEventListener('scroll', handleNavScroll)
 
     }, [lastScrollY])
 
+    useEffect(() => {
+        const currentScroll = window.scrollY
+
+        console.log(currentScroll)
+    }, [lastScrollY])
+
+    
+
+
 
 
 
     return (
         <>
-        <nav className={`${"navbar"} ${showNavbar ? "show-navbar" : "hide-navbar"}`}>
+        <motion.nav
+        variants={container}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+        className={`${"navbar"} ${showNavbar ? "show-navbar" : "hide-navbar"}`}>
             <div className="navbar__container">
             <Link href="/" passHref>
                 <span className={` ${"navbar__logo"} ${isActive ? "navbar__active-logo" : ""} `}>BITTEROSTRICH</span>
@@ -76,32 +100,60 @@ const ProjectNav = () => {
 
             <button onClick={() => {setIsActive(!isActive)}} className="navbar__burger-menu">
             <div className={`${isActive ? "navbar__active-burger-menu": "navbar__inactive-burger-menu"}`}></div>
-
             </button>
 
-                <ul className={` ${isActive ? "navbar__mobile-links" :"navbar__menu-links"}`}>
-                <div className={`${isActive ? "navbar__mobile-links-container" : "navbar__menu-links"}`}>
+
+            <AnimatePresence>
+
+                {isActive && (
+                                    <motion.ul 
+                                    variants={item}
+                                    initial="hidden"
+                                    animate="visible"
+                                    exit="exit"
+                                    className={` ${isActive ? "navbar__mobile-links" :"navbar__menu-links"}`}>
+                                    <div className={`${isActive ? "navbar__mobile-links-container" : "navbar__menu-links"}`}>
+                                    
+                                        <motion.li variants={content} className="navbar__menu-item-projects">
+                                            <Link rel="noreferrer" target="blank" href="https://www.linkedin.com/in/john-duru-7b65672b1/" >
+                                            <LinkedInIcon/></Link>
+                                            <Link rel="noreferrer" target="blank" href="https://github.com/Bitterostrich">
+                                            <GitHubIcon/></Link>
+                                        </motion.li>
+                    
+                                        {isActive && contactItems.map((item, index) => (
+                                            <ul className="navbar__contact-items" key={index}>
+                                                <motion.h5 variants={content}>{item.title}</motion.h5>
+                                                <motion.p variants={content}>{item.email}</motion.p>
+                                                <motion.p variants={content}>{item.number}</motion.p>
+                    
+                                            </ul>
+                                        ))}
+
+                                        
+                    <motion.div variants={content} className="navbar__external-links">
+                                <Link  rel="noreferrer" target="blank" href="https://www.linkedin.com/in/john-duru-7b65672b1/">GH</Link>
+                                <Link  rel="noreferrer" target="blank" href="https://github.com/Bitterostrich">LN</Link>
+                            </motion.div>
+                    
+                                </div>
+                                </motion.ul>
+                )}
                 
-                    <li className="navbar__menu-item">
-                        <Link rel="noreferrer" target="blank" href="https://www.linkedin.com/in/john-duru-7b65672b1/" >
-                        <LinkedInIcon/></Link>
-                        <Link rel="noreferrer" target="blank" href="https://github.com/Bitterostrich">
-                        <GitHubIcon/></Link>
-                    </li>
+            </AnimatePresence>
 
-                    {isActive && contactItems.map((item, index) => (
-                        <ul className="navbar__contact-items" key={index}>
-                            <h5>{item.title}</h5>
-                            <p>{item.email}</p>
-                            <p>{item.number}</p>
+                {!isActive && (
+                        <div className="navbar__menu-item-projects">
+                            <Link rel="noreferrer" target="blank" href="https://www.linkedin.com/in/john-duru-7b65672b1/" >
+                            <LinkedInIcon/></Link>
+                            <Link rel="noreferrer" target="blank" href="https://github.com/Bitterostrich">
+                            <GitHubIcon/></Link>
+                        </div>
+                )}
 
-                        </ul>
-                    ))}
 
             </div>
-            </ul>
-            </div>
-        </nav>
+        </motion.nav>
         </>
     )
 }

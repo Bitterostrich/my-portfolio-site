@@ -37,8 +37,8 @@ const TransitionProvider = ({ children }: { children: React.ReactNode }) => {
                 {isNavigating && (
                                 <motion.div 
                                 className="page-transition__entry"
-                                animate={{height: '0vh'}}
-                                exit={{height: '140vh'}}
+                                animate={{height: '0vw'}}
+                                exit={{height: '140vw'}}
                                 transition={{duration: 0.8, ease: 'easeOut'}}
                                 />
                             )}
@@ -58,14 +58,11 @@ const TransitionProvider = ({ children }: { children: React.ReactNode }) => {
                 {isNavigating && (
                             <motion.div 
                             className="page-transition__exit"
-                            initial={{height: '0vh'}}
-                            animate={{height: '0vh', opacity: 1, transition: {delay: 0.8, duration: 1, ease:'easeOut'}}}
-                            exit={{height: '140vh'}}
-                            
+                            initial={{height: '140vh'}}
+                            animate={{height: '0vh',  transition: {delay: 0.8, duration: 1, ease:'easeOut'}}}
+                            exit={{height: '0vh',  }}
                         />
                 )}
-
-
                 {children}
                 </div>
         </AnimatePresence>

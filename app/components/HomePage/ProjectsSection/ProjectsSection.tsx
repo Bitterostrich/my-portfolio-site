@@ -40,7 +40,7 @@ const projects = [
 
 const ProjectsSection = () => {
 
-    const projectSection = useRef()
+    const projectSection = useRef<HTMLElement>(null)
 
     const projectSectionInView = useInView(projectSection, {margin: '-300px', once: true})
 
