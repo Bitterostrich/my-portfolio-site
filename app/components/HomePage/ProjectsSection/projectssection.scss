@@ -2,9 +2,10 @@
 .home-page-projects {
     min-height: 100vh;
     // background-color: var(--eagle-grey);
-    scroll-snap-align: start;
-    scroll-behavior: smooth;
+    // scroll-snap-align: start;
+    // scroll-behavior: smooth;
     background: linear-gradient(48deg, var(--orange) 9.6%, var(--eagle-grey) 0%);
+    background-attachment: fixed;
 }
 
 .home-page-content {
