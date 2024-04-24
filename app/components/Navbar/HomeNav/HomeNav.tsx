@@ -90,7 +90,7 @@ const HomeNav = () => {
             <button  onClick={() => {setIsActive(!isActive)}} className="navbar__burger-menu">
             <div className={`${isActive ? "navbar__active-burger-menu": "navbar__inactive-burger-menu"}`}></div>
             </button>
-            <AnimatePresence mode="wait">
+            <AnimatePresence >
                 
 
             {isActive && (

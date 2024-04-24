@@ -35,8 +35,7 @@ const HeroSection = () => {
 
 
 
-    const containerRef = useRef<HTMLElement>(null)
-    const {scrollYProgress} = useScroll({container:containerRef})
+
 
     const heroRef = useRef<HTMLElement>(null)
     const heroRefInView = useInView(heroRef, {once: true})

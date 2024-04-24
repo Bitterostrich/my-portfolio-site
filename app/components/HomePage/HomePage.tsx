@@ -13,9 +13,7 @@ import ProjectsSection from './ProjectsSection/ProjectsSection'
 
 const HomePage = () => {
 
-    const containerRef = useRef<HTMLElement>(null)
 
-    const {scrollYProgress} = useScroll({container:containerRef})
 
 
 
@@ -50,7 +48,7 @@ const HomePage = () => {
 
     return (
         <>
-        <main ref={containerRef} className="home-page">
+        <main  className="home-page">
             {/* <div className="home-page__background">
             <div ref={sectionRefs.current.heroSection} id="heroSection"><HeroSection /></div>
             <div ref={sectionRefs.current.skills} id="skills"><Skills/></div>

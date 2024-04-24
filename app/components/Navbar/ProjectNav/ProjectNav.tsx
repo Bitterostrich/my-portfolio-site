@@ -7,6 +7,7 @@ import {motion, AnimatePresence} from 'framer-motion'
 import {container, item, content} from '@/app/styles/animations/nav'
 
 
+
 const menuItems = [
     {
         icon: LinkedInIcon,

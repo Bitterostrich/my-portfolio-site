@@ -19,7 +19,7 @@ export const NavProvider: React.FC <{children: ReactNode}> = ({children}) => {
     const [currentProject, setCurrentProject] = useState('')
     const [currentSection, setCurrentSection] = useState('')
 
-    console.log("This is the current project in the my nav context", currentProject)
+
 
     const updateProject = (project: string) => {
         setCurrentProject(project)
