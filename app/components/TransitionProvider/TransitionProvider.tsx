@@ -10,6 +10,8 @@ import './transitionprovider.scss'
 
 
 const TransitionProvider = ({ children }: { children: React.ReactNode }) => {
+
+    console.log(children)
     
     const [prevPathname, setPrevPathname] = useState<any>(null)
 
@@ -32,37 +34,48 @@ const TransitionProvider = ({ children }: { children: React.ReactNode }) => {
     const isNavigating = prevPathname !== null 
     
     return (
-        <AnimatePresence mode="wait">
+        <AnimatePresence >
             <div className="page-transition" key={pathname}>
-                {isNavigating && (
-                                <motion.div 
-                                className="page-transition__entry"
-                                animate={{height: '0vw'}}
-                                exit={{height: '140vw'}}
-                                transition={{duration: 0.8, ease: 'easeOut'}}
-                                />
-                            )}
+        
 
-                    {isNavigating && (
-                                <motion.div 
-                                className="page-transition__pathname"
-                                initial={{opacity: 1}}
-                                animate={{opacity: 0}}
-                                exit={{opacity: 0}}
-                                transition={{duration: 1.2, ease: 'easeOut'}}
-                                >
-                                    {pathname.substring(10)}
-                            </motion.div>
-                    )}
+                        {isNavigating && (
+                                                            <motion.div 
+                                                            className="page-transition__entry"
+                            
+                                                            animate={{height: '0vh'}}
+                                                            exit={{height: '140vh'}}
+                                                            transition={{duration: 0.8, ease: 'easeOut'}}
+                                                            />
+                        )}
 
-                {isNavigating && (
-                            <motion.div 
-                            className="page-transition__exit"
-                            initial={{height: '140vh'}}
-                            animate={{height: '0vh',  transition: {delay: 0.8, duration: 1, ease:'easeOut'}}}
-                            exit={{height: '0vh',  }}
-                        />
-                )}
+                      
+
+                        {isNavigating && (
+                                                            <motion.div 
+                                                            className="page-transition__pathname"
+                                                            initial={{opacity: 1}}
+                                                            animate={{opacity: 0}}
+                                                            exit={{opacity: 0}}
+                                                            transition={{duration: 1.2, ease: 'easeOut'}}
+                                                            >
+                                                                {pathname.substring(10)}
+                                                        </motion.div>
+                        )}
+
+        
+
+                        {isNavigating && (
+                                                        <motion.div 
+                                                        className="page-transition__exit"
+                                                        initial={{height: '140vh'}}
+                                                        animate={{height: '0vh',  transition: {delay: 0.8, duration: 1, ease:'easeOut'}}}
+                                                       
+                                                    />
+                        )}
+
+
+        
+        
                 {children}
                 </div>
         </AnimatePresence>

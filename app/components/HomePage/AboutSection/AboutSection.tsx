@@ -3,7 +3,7 @@ import './aboutsection.scss';
 import Image from 'next/image';
 import {ProfilePicture} from './imports';
 import {useNav} from '@/app/Contexts/navbarContext';
-import{motion, useInView, useScroll} from 'framer-motion';
+import{motion, useInView} from 'framer-motion';
 import {itemY, container, picture, rotate} from '@/app/styles/animations/globals'
 
 const AboutSection = () => {
