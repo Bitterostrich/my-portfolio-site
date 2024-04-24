@@ -34,39 +34,45 @@ const TransitionProvider = ({ children }: { children: React.ReactNode }) => {
     const isNavigating = prevPathname !== null 
     
     return (
-        <AnimatePresence mode="wait" >
+        <AnimatePresence >
             <div className="page-transition" key={pathname}>
         
 
-        
-                                <motion.div 
-                                className="page-transition__entry"
+                        {isNavigating && (
+                                                            <motion.div 
+                                                            className="page-transition__entry"
+                            
+                                                            animate={{height: '0vh'}}
+                                                            exit={{height: '140vh'}}
+                                                            transition={{duration: 0.8, ease: 'easeOut'}}
+                                                            />
+                        )}
 
-                                animate={{height: '0vh'}}
-                                exit={{height: '0vh'}}
-                                transition={{duration: 0.8, ease: 'easeOut'}}
-                                />
                       
 
-             
-                                <motion.div 
-                                className="page-transition__pathname"
-                                initial={{opacity: 1}}
-                                animate={{opacity: 0}}
-                                exit={{opacity: 0}}
-                                transition={{duration: 1.2, ease: 'easeOut'}}
-                                >
-                                    {pathname.substring(10)}
-                            </motion.div>
+                        {isNavigating && (
+                                                            <motion.div 
+                                                            className="page-transition__pathname"
+                                                            initial={{opacity: 1}}
+                                                            animate={{opacity: 0}}
+                                                            exit={{opacity: 0}}
+                                                            transition={{duration: 1.2, ease: 'easeOut'}}
+                                                            >
+                                                                {pathname.substring(10)}
+                                                        </motion.div>
+                        )}
+
         
 
-           
-                            <motion.div 
-                            className="page-transition__exit"
-                            initial={{height: '140vh'}}
-                            animate={{height: '0vh',  transition: {delay: 0.8, duration: 1, ease:'easeOut'}}}
-                           
-                        />
+                        {isNavigating && (
+                                                        <motion.div 
+                                                        className="page-transition__exit"
+                                                        initial={{height: '140vh'}}
+                                                        animate={{height: '0vh',  transition: {delay: 0.8, duration: 1, ease:'easeOut'}}}
+                                                       
+                                                    />
+                        )}
+
 
         
         
